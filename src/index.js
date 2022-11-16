@@ -1,17 +1,23 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// Import the React and ReactDOM libraries
+import React from "react";
+import ReactDOM from "react-dom/client";
+// Get reference to the div with ID root
+const el = document.getElementById("root");
+// Tell React to take control of that element
+const root = ReactDOM.createRoot(el);
+// Create a component
+function App() {
+  //   const date = new Date();
+  //   const time = date.toLocaleTimeString();
+  //   return <input type="number" min={5} />;
+  return (
+    <textarea
+      readOnly
+      maxLength={3}
+      spellCheck
+      style={{ backgroundColor: "gray" }}
+    />
+  );
+}
+// Show the component on the screen
+root.render(<App />);
